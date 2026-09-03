@@ -1,0 +1,85 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.discos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$espacio-medio;
+  margin-bottom: v.$espacio-grande;
+
+  article {
+    @include m.tarjeta;
+
+    h3 {
+      font-family: v.$font-titulos;
+      color: v.$color-texto-oscuro;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+  }
+
+  figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: v.$radio-chico;
+    display: block;
+  }
+
+  @include m.desktop {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    article {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+  }
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: v.$espacio-medio;
+
+  article {
+    @include m.tarjeta;
+
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: v.$radio-chico;
+    }
+
+    h3 {
+      font-family: v.$font-titulos;
+      color: v.$color-texto-oscuro;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+  }
+}
+
+.precio {
+  font-weight: bold;
+  color: v.$color-texto-oscuro;
+  margin-bottom: 12px;
+}
+
+.combos {
+  display: flex;
+  gap: v.$espacio-chico;
+  justify-content: center;
+
+  img {
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: v.$radio-chico;
+  }
+}

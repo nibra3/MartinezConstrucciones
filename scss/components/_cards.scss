@@ -1,0 +1,70 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+// El grid de .discos y .catalogo lo maneja Bootstrap (row g-4 + col-*),
+// por eso acá NO se define display/flex/grid propio: solo el contenido interno.
+.producto {
+  @include m.tarjeta;
+  height: 100%;
+}
+
+.discos {
+  margin-bottom: v.$espacio-grande;
+
+  .producto {
+    h3 {
+      font-family: v.$font-titulos;
+      color: v.$color-texto-oscuro;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+  }
+
+  figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: v.$radio-chico;
+    display: block;
+  }
+}
+
+.catalogo {
+  .producto {
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: v.$radio-chico;
+    }
+
+    h2,
+    h3 {
+      font-family: v.$font-titulos;
+      color: v.$color-texto-oscuro;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+  }
+}
+
+.precio {
+  font-weight: bold;
+  color: v.$color-texto-oscuro;
+  margin-bottom: 12px;
+}
+
+.combos {
+  display: flex;
+  gap: v.$espacio-chico;
+  justify-content: center;
+
+  img {
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: v.$radio-chico;
+  }
+}

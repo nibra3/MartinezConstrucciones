@@ -1,0 +1,17 @@
+@use '../utilities/variables' as v;
+
+.botones {
+  color: v.$color-blanco;
+  background-color: v.$color-secundario;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: v.$font-titulos;
+  padding: v.$espacio-chico v.$espacio-medio;
+  border-radius: v.$radio-boton;
+}
+
+button.botones {
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
