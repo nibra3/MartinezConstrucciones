@@ -19,6 +19,27 @@
     transform: translateY(0);
   }
 }
+@font-face {
+  font-family: "Akira Expanded";
+  src: url("../fonts/Akira_Expanded_Demo.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Heading Now Trial";
+  src: url("../fonts/HeadingNowTrial-56Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Heading Now Trial";
+  src: url("../fonts/HeadingNowTrial-56BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
@@ -47,6 +68,10 @@ figcaption {
 body,
 main {
   background-color: #244653;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 section {
@@ -138,12 +163,99 @@ section ul li a {
   background-color: #c86b4a;
 }
 
+.banner-hero {
+  display: flex;
+  align-items: center;
+  min-height: 260px;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .banner-hero {
+    min-height: 360px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner-hero {
+    min-height: 460px;
+  }
+}
+
+.banner-titulo {
+  margin: 0;
+  max-width: 900px;
+}
+
+.banner-linea1 {
+  animation: aparecer 0.6s ease-out 0s both;
+  display: block;
+  font-family: "Akira Expanded", "Oswald", sans-serif;
+  font-weight: 700;
+  color: #f0e6d3;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .banner-linea1 {
+    font-size: 54px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner-linea1 {
+    font-size: 72px;
+  }
+}
+
+.banner-linea2 {
+  animation: aparecer 0.6s ease-out 0.1s both;
+  display: block;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-weight: 700;
+  color: #f0e6d3;
+  font-size: 32px;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .banner-linea2 {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner-linea2 {
+    font-size: 64px;
+  }
+}
+
+.banner-destacado {
+  color: #244653;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+  text-decoration-color: #f0e6d3;
+}
+
+.banner-punto {
+  color: #244653;
+}
+
 .seccion-oscura {
   background-color: #192e35;
 }
 
 .fondo-claro {
   background-color: #f0e6d3;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 768px) {
+  .fondo-claro {
+    padding: 12px 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fondo-claro {
+    padding: 18px 40px;
+  }
 }
 .fondo-claro .secciones {
   color: #244653;
@@ -168,22 +280,35 @@ body.pagina-oscura main {
   background-color: #244653;
   padding: 14px 20px;
 }
+.navbar-custom .navbar-brand {
+  white-space: normal;
+  max-width: 76%;
+}
 .navbar-custom .brand-title {
   color: #c86b4a;
   font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  line-height: 1.1;
-  letter-spacing: 1px;
+  font-size: 19px;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
 }
 .navbar-custom .brand-subtitle {
   color: #244653;
-  font-size: 11px;
+  font-size: 10px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 @media screen and (min-width: 768px) {
+  .navbar-custom .navbar-brand {
+    max-width: none;
+    white-space: nowrap;
+  }
   .navbar-custom .brand-title {
     font-size: 27px;
+    letter-spacing: 1px;
+  }
+  .navbar-custom .brand-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
   }
 }
 @media screen and (min-width: 1024px) {

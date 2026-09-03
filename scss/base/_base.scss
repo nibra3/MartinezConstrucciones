@@ -12,6 +12,10 @@ main {
   background-color: v.$color-fondo;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
   padding: v.$espacio-medio;
 
@@ -96,6 +100,77 @@ section {
   background-color: v.$color-banner;
 }
 
+// Hero expandido con el titular en 2 líneas y tipografías propias
+.banner-hero {
+  display: flex;
+  align-items: center;
+  min-height: 260px;
+  text-align: left;
+
+  @include m.tablet {
+    min-height: 360px;
+  }
+
+  @include m.desktop {
+    min-height: 460px;
+  }
+}
+
+.banner-titulo {
+  margin: 0;
+  max-width: 900px;
+}
+
+.banner-linea1 {
+  @include m.animar-entrada;
+  display: block;
+  font-family: v.$font-banner-principal;
+  font-weight: 700;
+  color: v.$color-texto-claro;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+
+  @include m.tablet {
+    font-size: 54px;
+  }
+
+  @include m.desktop {
+    font-size: 72px;
+  }
+}
+
+.banner-linea2 {
+  @include m.animar-entrada(.6s, .1s);
+  display: block;
+  font-family: v.$font-banner-secundario;
+  font-weight: 700;
+  color: v.$color-texto-claro;
+  font-size: 32px;
+  line-height: 1;
+
+  @include m.tablet {
+    font-size: 48px;
+  }
+
+  @include m.desktop {
+    font-size: 64px;
+  }
+}
+
+.banner-destacado {
+  color: v.$color-secundario;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+  text-decoration-color: v.$color-texto-claro;
+}
+
+.banner-punto {
+  color: v.$color-secundario;
+}
+
 // Segunda mitad de la sección "info": tono más oscuro de la paleta
 .seccion-oscura {
   background-color: v.$color-fondo-oscuro;
@@ -104,6 +179,15 @@ section {
 // Sección clara puntual (fondo crema) dentro del flujo oscuro de la página
 .fondo-claro {
   background-color: v.$color-texto-claro;
+  padding: 10px v.$espacio-medio;
+
+  @include m.tablet {
+    padding: 12px v.$espacio-grande;
+  }
+
+  @include m.desktop {
+    padding: 18px v.$espacio-grande;
+  }
 
   .secciones {
     color: v.$color-secundario;
