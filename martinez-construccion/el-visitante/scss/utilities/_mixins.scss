@@ -1,0 +1,76 @@
+@use 'variables' as v;
+
+// Mixin genérico: cualquier breakpoint a medida (parámetro con valor por defecto)
+@mixin breakpoint($ancho: v.$punto-escritorio) {
+  @media screen and (min-width: $ancho) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include breakpoint(v.$punto-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include breakpoint(v.$punto-escritorio) {
+    @content;
+  }
+}
+
+@mixin titulo($tamano, $color: v.$color-texto-claro) {
+  color: $color;
+  font-family: v.$font-titulos;
+  font-size: $tamano;
+}
+
+// Placeholder reutilizable con @extend (sombra compartida por tarjetas flotantes:
+// formulario, carrusel, etc.). Se define acá para poder extenderse desde
+// cualquier partial con "@extend m.%sombra-elevada;"
+%sombra-elevada {
+  box-shadow: 0 10px 30px rgba(v.$color-texto-oscuro, .3);
+}
+
+// Mixin con parámetro (padding configurable, espacio-medio por defecto)
+// y @extend interno del placeholder de tarjeta base.
+@mixin tarjeta($padding: v.$espacio-medio) {
+  @extend %tarjeta-base;
+  padding: $padding;
+}
+
+%tarjeta-base {
+  background-color: v.$color-blanco;
+  border-radius: v.$radio-medio;
+  text-align: center;
+}
+
+// Mixin de flex con parámetros con valores por defecto, para no repetir
+// display:flex + alineación en cada componente.
+@mixin flex($direccion: row, $justificar: center, $alinear: center, $espacio: null) {
+  display: flex;
+  flex-direction: $direccion;
+  justify-content: $justificar;
+  align-items: $alinear;
+
+  @if $espacio {
+    gap: $espacio;
+  }
+}
+
+// Animación local reutilizable (keyframes), con duración y desplazamiento
+// configurables por parámetro.
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin animar-entrada($duracion: .6s, $demora: 0s) {
+  animation: aparecer $duracion ease-out $demora both;
+}

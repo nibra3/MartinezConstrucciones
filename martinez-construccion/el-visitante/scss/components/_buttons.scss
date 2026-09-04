@@ -1,0 +1,26 @@
+@use '../utilities/variables' as v;
+
+.botones {
+  display: inline-block;
+  color: v.$color-blanco;
+  background-color: v.$color-primario;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: v.$font-titulos;
+  padding: v.$espacio-chico v.$espacio-medio;
+  border-radius: v.$radio-boton;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: v.$color-secundario;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(v.$color-texto-oscuro, .35);
+  }
+}
+
+button.botones {
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}

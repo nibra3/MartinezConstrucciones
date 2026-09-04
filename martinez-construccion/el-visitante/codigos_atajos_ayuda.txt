@@ -1,0 +1,64 @@
+html:5: para empezar
+head: css
+<ul>:lista desordenadas
+<ol>:lista ordenada
+<li>:cada elemento
+target="_blank": abre link de otra pag (ajeno a mi web) en otra pestaña
+<main>:
+<h1>: una unica vez
+<h2>: titulo de section
+<h3>: se puede
+<iframe>: para poner videos
+css: selectores{propiedad:valor;}
+selectores: etiquetas, clases, id y *
+css: h1{color: red;}
+list-style: none (sacar puntos del nav)
+text-decoration: none (sacar linea abajo del link)
+class: en css se llama .nombredeclass
+id: unico e irrepetible (ni en otro archivo se puede utilizar. en css lo llamás con #nombreDeId
+span: etiqueta auxiliar hecha para agarrar un pedazo de texto
+repository name github: el-visitante
+En css: primero /*---header---*/ (estilos de header) /*---main----*/ (estilos main)
+
+div: es una etiqeta de bloque (derecha a izquierda)
+img: etiqueta de linea (imagenes son etiquetas de lineas) usa el ancho del contenido
+margin: espacio externo que tenemos arriba, derecha, abajo y izq; 3 valores 1ro arriba, 2do der/izq, 3ro abajo. 4 valores agujas reloj
+padding: espacio interno arriba, abajo, izq, der; valores igual que margin
+box-sizing: border-box esto hace que se mantenga el tamaño base 
+overflow: scroll: (Si no le ponemos height, se adapta solo  basicamete) min-height (consultar)
+la altura de los contenedores si no se pone height toma el valor de la caja
+la img de productos debe ser de 300px siempre
+
+flex es para contenido, siempre padres no hijo ni IMG (en img ponerle al padre)
+display:flex: hace que vaya en fila
+justify-content: es para alinear horizontal el contenido del flex 
+align: alinear vertical 
+gap:espaciado entre elementos de flex
+
+flex-wrap:nowrap: calculo que hará lo contrario al wrap
+flex-wrap: dependiendo el ancho empieza a bajar el contenido
+grid-template-columns: 300px 400px : el tamaño de cada columna
+
+object-fit: cover para que se adapten 
+grid-template-areas siempre seguir el maximo o menor cantidad de la primera fila, nunca mas que la primera
+
+
+hover: pasar el cursor por encima cambia de color
+active click cambia de color
+child: :first-child , :last-child , :nth-child(nro) ((para agarrar los del medio)
+even (pares), odd (impares), 3n/4n cada 3, n+5 apartir del 5
+not: ignora la clase al que le indicás not(class)
+
+::before: poner contenido antes
+::after: poner contenido despues
+::first-letter: primer letra
+::first-line: primer linea 
+::selection: selección de texto cuando seleccionás textos
+::marker: modifica los items de las listas
+
+class container se usa para boodstrap
+ 
+
+text-shadow: sombras texto box-shadow(sombra caja) 1px(mueve sombra de costados) 1px(mueve sombra arribaabajo) 1px(desenfoque/disfuminado) rgb(color sombra)
+ 
+

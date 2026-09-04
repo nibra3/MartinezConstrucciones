@@ -1,0 +1,35 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.navbar-custom {
+  .nav-link {
+    color: v.$color-texto-claro;
+    font-family: v.$font-titulos;
+    letter-spacing: .5px;
+    padding: 10px 12px;
+    transition: color .2s ease;
+
+    @include m.desktop {
+      padding: 10px 16px;
+    }
+
+    &:hover,
+    &:focus {
+      color: v.$color-primario;
+    }
+
+    &.active {
+      color: v.$color-primario;
+      font-weight: 700;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: rgba(v.$color-texto-claro, .35);
+    padding: 6px 10px;
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem rgba(v.$color-secundario, .4);
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.albumes {
+  text-align: center;
+}
+
+.albumes-embeds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$espacio-medio;
+  margin-top: v.$espacio-medio;
+
+  iframe {
+    width: 100% !important;
+    max-width: 400px;
+  }
+
+  @include m.desktop {
+    flex-direction: row;
+    justify-content: center;
+
+    iframe {
+      width: 40% !important;
+    }
+  }
+}
+
+.promo-combo {
+  @include m.titulo(25px);
+  margin-bottom: 10px;
+}
+
+.recital-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'poster' 'info' 'discografia';
+  gap: v.$espacio-medio;
+  padding: v.$espacio-medio;
+  align-items: start;
+
+  @include m.desktop {
+    grid-template-columns: 1fr 1.6fr;
+    grid-template-areas: 'poster info' 'poster discografia';
+    padding: v.$espacio-grande;
+  }
+}
+
+.recital-poster {
+  grid-area: poster;
+
+  img {
+    width: 100%;
+    border-radius: v.$radio-medio;
+    display: block;
+  }
+}
+
+.recital-info {
+  grid-area: info;
+  background-color: v.$color-texto-claro;
+  border-radius: v.$radio-medio;
+  padding: 25px;
+
+  h2 {
+    @include m.titulo(24px);
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: v.$color-texto-oscuro;
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .botones {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  @include m.desktop {
+    h2 { font-size: 26px; }
+  }
+}
+
+.recital-discografia {
+  grid-area: discografia;
+
+  h2 {
+    @include m.titulo(22px);
+    margin-bottom: 16px;
+  }
+}

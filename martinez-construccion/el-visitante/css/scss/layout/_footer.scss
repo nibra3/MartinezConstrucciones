@@ -1,0 +1,45 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+footer {
+  background-color: v.$color-fondo-oscuro;
+  padding: v.$espacio-medio;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$espacio-medio;
+  text-align: center;
+
+  div div ul li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: v.$color-texto-claro;
+    }
+  }
+
+  @include m.desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: v.$espacio-grande;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$espacio-medio;
+
+  @include m.desktop {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.copyright {
+  color: v.$color-texto-pie;
+  font-size: 15px;
+}

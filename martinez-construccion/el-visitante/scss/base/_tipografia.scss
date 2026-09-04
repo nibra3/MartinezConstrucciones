@@ -1,0 +1,46 @@
+@use '../utilities/variables' as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('../fonts/Akira_Expanded_Demo.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heading Now Trial';
+  src: url('../fonts/HeadingNowTrial-56Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heading Now Trial';
+  src: url('../fonts/HeadingNowTrial-56BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  font-family: v.$font-principal;
+}
+
+p {
+  color: v.$color-texto-claro;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+figcaption {
+  color: v.$color-secundario;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px 0;
+}

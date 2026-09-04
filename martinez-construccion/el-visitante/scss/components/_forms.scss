@@ -1,0 +1,68 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.formulario {
+  text-align: center;
+  color: v.$color-texto-oscuro;
+}
+
+.form-card {
+  @extend %sombra-elevada;
+  background-color: v.$color-blanco;
+  max-width: 700px;
+  margin: v.$espacio-medio auto 0;
+  padding: 30px v.$espacio-medio;
+  border-radius: v.$radio-grande;
+
+  .form-label {
+    color: v.$color-texto-oscuro;
+    font-family: v.$font-titulos;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: .5px;
+  }
+
+  .form-control,
+  .form-select {
+    border: 1px solid v.$color-borde;
+    border-radius: 6px;
+
+    &:focus {
+      border-color: v.$color-secundario;
+      box-shadow: 0 0 0 .2rem rgba(v.$color-secundario, .25);
+    }
+  }
+
+  .form-check-input {
+    &:checked {
+      background-color: v.$color-secundario;
+      border-color: v.$color-secundario;
+    }
+
+    &:focus {
+      border-color: v.$color-secundario;
+      box-shadow: 0 0 0 .2rem rgba(v.$color-secundario, .25);
+    }
+  }
+
+  .form-check-label { font-size: 14px; }
+
+  fieldset {
+    border: none;
+    margin-bottom: v.$espacio-chico;
+  }
+
+  legend {
+    float: none;
+    width: auto;
+    font-size: 15px;
+  }
+
+  @include m.desktop { padding: v.$espacio-grande; }
+}
+
+form fieldset legend {
+  color: v.$color-secundario;
+  font-weight: bold;
+  font-family: v.$font-titulos;
+}

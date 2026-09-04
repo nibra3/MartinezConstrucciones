@@ -1,0 +1,215 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+main {
+  background-color: v.$color-fondo;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: v.$espacio-medio;
+
+  @include m.tablet {
+    padding: v.$espacio-medio v.$espacio-grande;
+  }
+
+  @include m.desktop {
+    padding: v.$espacio-grande;
+  }
+
+  ul li {
+    list-style: none;
+    text-align: center;
+    color: v.$color-texto-claro;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.secciones {
+  @include m.titulo(22px);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.parrafos {
+  color: v.$color-texto-suave;
+  font-size: 13px;
+  margin-bottom: v.$espacio-chico;
+}
+
+.destacados {
+  background-color: v.$color-texto-claro;
+}
+
+.destacadoDelMes {
+  @include m.titulo(25px);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo {
+  @include m.animar-entrada;
+  color: v.$color-texto-claro;
+  font-family: v.$font-titulos;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @include m.tablet {
+    font-size: 28px;
+  }
+
+  @include m.desktop {
+    font-size: 30px;
+  }
+}
+
+.pie {
+  text-align: center;
+  color: v.$color-texto-claro;
+  margin-bottom: 10px;
+}
+
+.destacados .pie {
+  color: v.$color-texto-oscuro;
+}
+
+.destacados .titulo {
+  color: v.$color-secundario;
+}
+
+.destacados .destacadoDelMes {
+  color: v.$color-secundario;
+}
+
+// Banner principal (hero): franja naranja de la paleta de Martinez Construcción
+.banner {
+  background-color: v.$color-banner;
+}
+
+// Hero expandido con el titular en 2 líneas y tipografías propias
+.banner-hero {
+  display: flex;
+  align-items: center;
+  min-height: 260px;
+  text-align: left;
+
+  @include m.tablet {
+    min-height: 360px;
+  }
+
+  @include m.desktop {
+    min-height: 460px;
+  }
+}
+
+.banner-titulo {
+  margin: 0;
+  max-width: 900px;
+}
+
+.banner-linea1 {
+  @include m.animar-entrada;
+  display: block;
+  font-family: v.$font-banner-principal;
+  font-weight: 700;
+  color: v.$color-texto-claro;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+
+  @include m.tablet {
+    font-size: 54px;
+  }
+
+  @include m.desktop {
+    font-size: 72px;
+  }
+}
+
+.banner-linea2 {
+  @include m.animar-entrada(.6s, .1s);
+  display: block;
+  font-family: v.$font-banner-secundario;
+  font-weight: 700;
+  color: v.$color-texto-claro;
+  font-size: 32px;
+  line-height: 1;
+
+  @include m.tablet {
+    font-size: 48px;
+  }
+
+  @include m.desktop {
+    font-size: 64px;
+  }
+}
+
+.banner-destacado {
+  color: v.$color-secundario;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+  text-decoration-color: v.$color-texto-claro;
+}
+
+.banner-punto {
+  color: v.$color-secundario;
+}
+
+// Segunda mitad de la sección "info": tono más oscuro de la paleta
+.seccion-oscura {
+  background-color: v.$color-fondo-oscuro;
+}
+
+// Sección clara puntual (fondo crema) dentro del flujo oscuro de la página
+.fondo-claro {
+  background-color: v.$color-texto-claro;
+  padding: 10px v.$espacio-medio;
+
+  @include m.tablet {
+    padding: 12px v.$espacio-grande;
+  }
+
+  @include m.desktop {
+    padding: 18px v.$espacio-grande;
+  }
+
+  .secciones {
+    color: v.$color-secundario;
+  }
+
+  li {
+    color: v.$color-texto-oscuro;
+  }
+}
+
+// Variante oscura de .destacados (para bloques puntuales, sin afectar
+// al resto de secciones que usan el fondo claro por defecto)
+.destacados.destacados-oscuro {
+  background-color: v.$color-header-footer;
+
+  .destacadoDelMes {
+    color: v.$color-texto-claro;
+  }
+}
+
+// Página completa con el tono oscuro de la paleta en vez del tono base
+body.pagina-oscura,
+body.pagina-oscura main {
+  background-color: v.$color-fondo-oscuro;
+}
