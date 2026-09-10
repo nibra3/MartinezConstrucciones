@@ -290,10 +290,6 @@ section ul li a {
   color: #111111;
 }
 
-.caracteristicas {
-  margin-top: 10px;
-}
-
 .caracteristica {
   background-color: #192e35;
   border-radius: 8px;
@@ -303,6 +299,11 @@ section ul li a {
   flex-direction: column;
   gap: 6px;
   text-align: left;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+.caracteristica:hover {
+  background-color: #2b4f5b;
+  transform: translateY(-6px);
 }
 .caracteristica-header {
   display: flex;
@@ -327,6 +328,46 @@ section ul li a {
   text-align: left;
   margin: 0;
   padding-left: 54px;
+}
+
+.desde-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .desde-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+  }
+}
+
+.desde-imagen img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 25px 0 40px rgba(0, 0, 0, 0.45);
+  transition: filter 0.25s ease;
+}
+.desde-imagen img:hover {
+  filter: brightness(1.15);
+}
+
+.desde-texto .destacadoDelMes {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.desde-texto p {
+  color: #f0e6d3;
+  text-align: left;
+  max-width: 100%;
+  margin: 0 0 16px;
+}
+.desde-texto p:last-child {
+  margin-bottom: 0;
 }
 
 .destacados.destacados-oscuro {
