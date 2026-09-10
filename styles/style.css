@@ -290,6 +290,45 @@ section ul li a {
   color: #111111;
 }
 
+.caracteristicas {
+  margin-top: 10px;
+}
+
+.caracteristica {
+  background-color: #192e35;
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+.caracteristica-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.caracteristica-icono {
+  font-size: 40px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.caracteristica h3 {
+  color: #f0e6d3;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+.caracteristica p {
+  color: #f0e6d3;
+  font-size: 14px;
+  max-width: 100%;
+  text-align: left;
+  margin: 0;
+  padding-left: 54px;
+}
+
 .destacados.destacados-oscuro {
   background-color: #244653;
 }
