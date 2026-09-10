@@ -239,6 +239,32 @@ section ul li a {
   color: #244653;
 }
 
+.banner-imagen {
+  padding: 0;
+}
+
+.banner-imagen picture {
+  display: block;
+}
+
+.banner-imagen-img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: left center;
+}
+@media screen and (min-width: 768px) {
+  .banner-imagen-img {
+    height: 320px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner-imagen-img {
+    height: 460px;
+  }
+}
+
 .seccion-oscura {
   background-color: #192e35;
 }
@@ -395,6 +421,44 @@ footer div div ul li a {
 .copyright {
   color: #666;
   font-size: 15px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 16px rgba(17, 17, 17, 0.35);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+.whatsapp-float:hover, .whatsapp-float:focus {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.45);
+}
+@media screen and (min-width: 1024px) {
+  .whatsapp-float {
+    right: 30px;
+    bottom: 30px;
+    width: 64px;
+    height: 64px;
+  }
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .botones {

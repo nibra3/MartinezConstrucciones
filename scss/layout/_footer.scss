@@ -41,3 +41,42 @@ footer {
   color: v.$color-texto-pie;
   font-size: 15px;
 }
+
+// Botón flotante de WhatsApp, fijo abajo a la derecha en todas las páginas
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: v.$color-whatsapp;
+  border-radius: 50%;
+  @include m.flex;
+  box-shadow: 0 6px 16px rgba(v.$color-texto-oscuro, .35);
+  z-index: 999;
+  transition: transform .2s ease, box-shadow .2s ease;
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: v.$color-blanco;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(v.$color-texto-oscuro, .45);
+  }
+
+  @include m.desktop {
+    right: 30px;
+    bottom: 30px;
+    width: 64px;
+    height: 64px;
+
+    svg {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}
