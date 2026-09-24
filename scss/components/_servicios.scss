@@ -1,0 +1,87 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+// Sección "Nuestros servicios": tarjetas blancas rectas con foto + nombre.
+// El carril (.servicios-carril) scrollea hacia el costado, así se pueden
+// sumar más servicios sin romper el diseño.
+
+.servicios-titulo {
+  font-family: v.$font-servicios;
+  font-weight: 800;
+  color: v.$color-texto-claro;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: v.$espacio-medio;
+
+  @include m.desktop {
+    font-size: 38px;
+  }
+}
+
+.servicios-carril {
+  display: flex;
+  gap: v.$espacio-medio;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 14px; // aire para la barra de scroll
+  margin-bottom: v.$espacio-chico;
+
+  // Barra de scroll finita y con los colores de la paleta
+  scrollbar-width: thin;
+  scrollbar-color: v.$color-texto-claro transparent;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: v.$color-texto-claro;
+  }
+
+  &:focus-visible {
+    outline: 2px solid v.$color-texto-claro;
+    outline-offset: 4px;
+  }
+}
+
+.servicio {
+  flex: 0 0 75%; // en celu se ve un pedacito de la siguiente: invita a deslizar
+  scroll-snap-align: start;
+  background-color: v.$color-blanco;
+  border-radius: 0; // esquinas rectas
+  padding: 16px 16px 12px;
+  text-align: center;
+
+  @include m.tablet {
+    flex-basis: calc((100% - #{v.$espacio-medio}) / 2.2);
+  }
+
+  @include m.desktop {
+    // 4 tarjetas entran justas; de la 5ª en adelante aparece el scroll
+    flex-basis: calc((100% - 3 * #{v.$espacio-medio}) / 4);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  h3 {
+    font-family: v.$font-servicios;
+    font-weight: 800;
+    color: v.$color-fondo-oscuro;
+    font-size: 24px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 14px 0 0;
+
+    @include m.desktop {
+      font-size: 28px;
+    }
+  }
+}

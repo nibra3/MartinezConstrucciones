@@ -40,6 +40,13 @@
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "Heading Now Trial";
+  src: url("../fonts/HeadingNowTrial-57ExtraBold.ttf") format("truetype"), url("../fonts/HeadingNowTrial-56Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
@@ -902,4 +909,82 @@ form fieldset legend {
   color: #244653;
   font-weight: bold;
   font-family: "Oswald", sans-serif;
+}
+
+/* ---- Nuestros servicios ---- */
+.servicios-titulo {
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-weight: 800;
+  color: #f0e6d3;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .servicios-titulo {
+    font-size: 38px;
+  }
+}
+
+.servicios-carril {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 14px;
+  margin-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #f0e6d3 transparent;
+}
+.servicios-carril::-webkit-scrollbar {
+  height: 6px;
+}
+.servicios-carril::-webkit-scrollbar-thumb {
+  background-color: #f0e6d3;
+}
+.servicios-carril:focus-visible {
+  outline: 2px solid #f0e6d3;
+  outline-offset: 4px;
+}
+
+.servicio {
+  flex: 0 0 75%;
+  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 0;
+  padding: 16px 16px 12px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .servicio {
+    flex-basis: calc((100% - 20px) / 2.2);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .servicio {
+    flex-basis: calc((100% - 3 * 20px) / 4);
+  }
+}
+.servicio img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 0;
+}
+.servicio h3 {
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-weight: 800;
+  color: #192e35;
+  font-size: 24px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 14px 0 0;
+}
+@media screen and (min-width: 1024px) {
+  .servicio h3 {
+    font-size: 28px;
+  }
 }

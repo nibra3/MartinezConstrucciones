@@ -26,6 +26,17 @@
   font-display: swap;
 }
 
+// Heading Now Trial 57 ExtraBold (títulos de "Nuestros servicios").
+// Si el archivo 57 todavía no está en /fonts, el navegador usa la 56 Bold.
+@font-face {
+  font-family: 'Heading Now Trial';
+  src: url('../fonts/HeadingNowTrial-57ExtraBold.ttf') format('truetype'),
+       url('../fonts/HeadingNowTrial-56Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: v.$font-principal;
 }
