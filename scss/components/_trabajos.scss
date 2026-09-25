@@ -1,0 +1,170 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+// Página "Nuestros Trabajos": cada trabajo es una tarjeta con
+// una comparación ANTES / DESPUÉS grande y una galería de fotos extra.
+// El grid de artículos lo maneja Bootstrap (row g-4 + col-*).
+
+.trabajo {
+  @include m.tarjeta;
+  height: 100%;
+
+  h2 {
+    font-family: v.$font-titulos;
+    color: v.$color-texto-oscuro;
+    font-size: 22px;
+    margin: v.$espacio-medio 0 6px;
+  }
+}
+
+// Antes y después lado a lado (en mobile quedan uno arriba del otro)
+.comparacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$espacio-chico;
+
+  @include m.tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.comparacion-foto {
+  position: relative;
+  margin: 0;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover; // recorta sin deformar aunque la foto sea vertical
+    border-radius: v.$radio-chico;
+    display: block;
+  }
+}
+
+// Etiquetas ANTES / DESPUÉS sobre la foto
+.etiqueta {
+  position: absolute;
+  top: v.$espacio-chico;
+  left: v.$espacio-chico;
+  padding: 3px 10px;
+  font-family: v.$font-titulos;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: v.$color-blanco;
+  border-radius: v.$radio-chico;
+
+  &-antes {
+    background-color: rgba(v.$color-texto-oscuro, .75);
+  }
+
+  &-despues {
+    background-color: v.$color-primario;
+  }
+}
+
+// Galería de fotos extra de cada trabajo
+.galeria {
+  @include m.flex($espacio: v.$espacio-chico);
+  flex-wrap: wrap;
+  margin-top: v.$espacio-medio;
+}
+
+.miniatura {
+  flex: 0 0 90px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: v.$radio-chico;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s ease;
+  }
+
+  @include m.tablet {
+    flex-basis: 120px;
+  }
+
+  &:hover img {
+    transform: scale(1.08);
+  }
+
+  .etiqueta {
+    top: 4px;
+    left: 4px;
+    padding: 1px 6px;
+    font-size: 11px;
+  }
+}
+
+// Fotos clickeables: cursor de lupa
+.ampliar {
+  display: block;
+  cursor: zoom-in;
+}
+
+// Visor de fotos (Modal de Bootstrap)
+.visor {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+}
+
+.visor-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: v.$radio-chico;
+  user-select: none;
+}
+
+.visor-pie {
+  color: v.$color-texto-claro;
+  text-align: center;
+  margin: v.$espacio-chico 0 0;
+  font-size: 14px;
+}
+
+.visor-cerrar {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  opacity: 1;
+}
+
+.visor-flecha {
+  @include m.flex;
+  position: absolute;
+  top: 40%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(v.$color-texto-oscuro, .6);
+  color: v.$color-blanco;
+  font-size: 30px;
+  line-height: 1;
+  padding-bottom: 4px;
+  transition: background-color .2s ease;
+
+  &:hover {
+    background-color: v.$color-primario;
+  }
+}
+
+.visor-anterior {
+  left: v.$espacio-chico;
+}
+
+.visor-siguiente {
+  right: v.$espacio-chico;
+}
+
+// Fondo oscuro detrás del visor
+.modal-backdrop.show {
+  opacity: .85;
+}
