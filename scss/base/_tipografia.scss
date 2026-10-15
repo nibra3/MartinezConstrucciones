@@ -16,6 +16,8 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 
 @font-face {
@@ -24,6 +26,8 @@
   font-weight: 700;
   font-style: italic;
   font-display: swap;
+  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 
 // Heading Now Trial 57 ExtraBold (títulos de "Nuestros servicios").
@@ -35,6 +39,8 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 
 body {

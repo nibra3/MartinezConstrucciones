@@ -25,7 +25,7 @@
   .form-control,
   .form-select {
     border: 1px solid v.$color-borde;
-    border-radius: 6px;
+    border-radius: 0;
 
     &:focus {
       border-color: v.$color-secundario;

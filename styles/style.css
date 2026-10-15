@@ -5,7 +5,7 @@
 
 .historia-item, .producto {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 0;
   text-align: center;
 }
 
@@ -32,6 +32,8 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 @font-face {
   font-family: "Heading Now Trial";
@@ -39,6 +41,8 @@
   font-weight: 700;
   font-style: italic;
   font-display: swap;
+  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 @font-face {
   font-family: "Heading Now Trial";
@@ -46,9 +50,11 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
 }
 
 p {
@@ -105,7 +111,7 @@ section ul li a {
 
 .secciones {
   color: #f0e6d3;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 22px;
   text-align: center;
   margin-bottom: 16px;
@@ -123,7 +129,7 @@ section ul li a {
 
 .destacadoDelMes {
   color: #f0e6d3;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 25px;
   text-align: center;
   margin-bottom: 30px;
@@ -132,7 +138,7 @@ section ul li a {
 .titulo {
   animation: aparecer 0.6s ease-out 0s both;
   color: #f0e6d3;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 26px;
   text-align: center;
   margin-bottom: 10px;
@@ -167,7 +173,7 @@ section ul li a {
 }
 
 .banner {
-  background-color: #c86b4a;
+  background-color: #192e35;
 }
 
 .banner-hero {
@@ -195,7 +201,7 @@ section ul li a {
 .banner-linea1 {
   animation: aparecer 0.6s ease-out 0s both;
   display: block;
-  font-family: "Akira Expanded", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-weight: 700;
   color: #f0e6d3;
   font-size: 34px;
@@ -300,7 +306,7 @@ section ul li a {
 
 .caracteristica {
   background-color: #192e35;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 20px;
   height: 100%;
   display: flex;
@@ -325,7 +331,7 @@ section ul li a {
 }
 .caracteristica h3 {
   color: #f0e6d3;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 18px;
   margin: 0;
 }
@@ -364,7 +370,7 @@ section ul li a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 0;
   display: block;
   box-shadow: 25px 0 40px rgba(0, 0, 0, 0.45);
   transition: filter 0.25s ease;
@@ -418,7 +424,7 @@ body.pagina-oscura main {
 }
 .navbar-custom .brand-title {
   color: #c86b4a;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 19px;
   line-height: 1.15;
   letter-spacing: 0.5px;
@@ -426,7 +432,7 @@ body.pagina-oscura main {
 .navbar-custom .brand-subtitle {
   color: #244653;
   font-size: 10px;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   letter-spacing: 1.5px;
 }
 @media screen and (min-width: 768px) {
@@ -454,7 +460,7 @@ body.pagina-oscura main {
 
 .navbar-custom .nav-link {
   color: #f0e6d3;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   letter-spacing: 0.5px;
   padding: 10px 12px;
   transition: color 0.2s ease;
@@ -573,9 +579,9 @@ footer div div ul li a {
   background-color: #c86b4a;
   font-weight: bold;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   padding: 8px 20px;
-  border-radius: 5px;
+  border-radius: 0;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 .botones:hover, .botones:focus {
@@ -599,7 +605,7 @@ button.botones {
   margin-bottom: 40px;
 }
 .discos .producto h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   color: #111111;
   margin-bottom: 4px;
   font-size: 17px;
@@ -608,7 +614,7 @@ button.botones {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 0;
   display: block;
 }
 
@@ -616,11 +622,11 @@ button.botones {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 0;
 }
 .catalogo .producto h2,
 .catalogo .producto h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   color: #111111;
   margin-bottom: 4px;
   font-size: 17px;
@@ -643,7 +649,7 @@ button.botones {
   min-width: 0;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .albumes {
@@ -673,7 +679,7 @@ button.botones {
 
 .promo-combo {
   color: #f0e6d3;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 25px;
   margin-bottom: 10px;
 }
@@ -699,19 +705,19 @@ button.botones {
 }
 .recital-poster img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0;
   display: block;
 }
 
 .recital-info {
   grid-area: info;
   background-color: #f0e6d3;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 25px;
 }
 .recital-info h2 {
   color: #244653;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 24px;
   margin-bottom: 12px;
 }
@@ -736,7 +742,7 @@ button.botones {
 }
 .recital-discografia h2 {
   color: #f0e6d3;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 22px;
   margin-bottom: 16px;
 }
@@ -762,7 +768,7 @@ button.botones {
 }
 .historia-item h3 {
   color: #244653;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 20px;
   margin-bottom: 6px;
 }
@@ -776,7 +782,7 @@ button.botones {
   text-align: center;
 }
 .valores .producto h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   color: #111111;
   margin-bottom: 8px;
   font-size: 17px;
@@ -790,7 +796,7 @@ button.botones {
 .carousel-custom {
   max-width: 900px;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(17, 17, 17, 0.4);
 }
@@ -804,7 +810,7 @@ button.botones {
   text-align: center;
 }
 .carousel-custom .carousel-caption h2 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   color: #fff;
   font-size: 20px;
   margin-bottom: 6px;
@@ -860,11 +866,11 @@ button.botones {
   max-width: 700px;
   margin: 20px auto 0;
   padding: 30px 20px;
-  border-radius: 12px;
+  border-radius: 0;
 }
 .form-card .form-label {
   color: #111111;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.5px;
@@ -872,7 +878,7 @@ button.botones {
 .form-card .form-control,
 .form-card .form-select {
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 0;
 }
 .form-card .form-control:focus,
 .form-card .form-select:focus {
@@ -908,7 +914,7 @@ button.botones {
 form fieldset legend {
   color: #244653;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
 }
 
 /* ---- Nuestros servicios ---- */
@@ -992,7 +998,7 @@ form fieldset legend {
 /* ===== Nuestros Trabajos (scss/components/_trabajos.scss) ===== */
 .trabajo {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 0;
   text-align: center;
 }
 
@@ -1001,7 +1007,7 @@ form fieldset legend {
   height: 100%;
 }
 .trabajo h2 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   color: #111111;
   font-size: 22px;
   margin: 20px 0 6px;
@@ -1026,7 +1032,7 @@ form fieldset legend {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 0;
   display: block;
 }
 
@@ -1035,11 +1041,11 @@ form fieldset legend {
   top: 8px;
   left: 8px;
   padding: 3px 10px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 0;
 }
 .etiqueta-antes {
   background-color: rgba(17, 17, 17, 0.75);
@@ -1063,7 +1069,7 @@ form fieldset legend {
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 0;
 }
 .miniatura img {
   width: 100%;
@@ -1103,7 +1109,7 @@ form fieldset legend {
   max-width: 100%;
   max-height: 80vh;
   object-fit: contain;
-  border-radius: 4px;
+  border-radius: 0;
   user-select: none;
 }
 
@@ -1153,4 +1159,236 @@ form fieldset legend {
 
 .modal-backdrop.show {
   opacity: 0.85;
+}
+
+/* ===== Esquinas rectas en todo el sitio (también pisa a Bootstrap) ===== */
+:root {
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+  --bs-border-radius-xl: 0;
+  --bs-border-radius-xxl: 0;
+  --bs-border-radius-2xl: 0;
+  --bs-border-radius-pill: 0;
+}
+
+img, picture, figure, iframe, video,
+.form-control, .form-select, .btn, .card, .alert, .badge,
+.navbar-toggler, .dropdown-menu, .modal-content, .input-group-text {
+  border-radius: 0 !important;
+}
+
+/* ===== Página de contacto ===== */
+.contacto-grid {
+  display: grid;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+@media screen and (min-width: 1024px) {
+  .contacto-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 60px;
+  }
+}
+
+.contacto-titulo {
+  color: #f0e6d3;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.contacto-form {
+  display: grid;
+  gap: 18px;
+}
+@media screen and (min-width: 768px) {
+  .contacto-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contacto-campo-ancho {
+    grid-column: 1 / -1;
+  }
+}
+
+.contacto-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contacto-campo label {
+  color: #f0e6d3;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+.contacto-campo label .obligatorio {
+  color: #c86b4a;
+  margin-left: 2px;
+}
+
+.contacto-campo label .opcional {
+  color: rgba(240, 230, 211, 0.55);
+  font-size: 13px;
+}
+
+.contacto-campo input,
+.contacto-campo textarea {
+  width: 100%;
+  background-color: #244653;
+  border: 1px solid rgba(240, 230, 211, 0.12);
+  border-radius: 0;
+  color: #f0e6d3;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-size: 15px;
+  padding: 12px 14px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.contacto-campo textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contacto-campo input::placeholder,
+.contacto-campo textarea::placeholder {
+  color: rgba(240, 230, 211, 0.45);
+}
+
+.contacto-campo input:focus,
+.contacto-campo textarea:focus {
+  outline: none;
+  border-color: #c86b4a;
+  background-color: #2b4f5b;
+}
+
+.contacto-campo input:user-invalid,
+.contacto-campo textarea:user-invalid {
+  border-color: #e0574f;
+}
+
+.contacto-enviar {
+  grid-column: 1 / -1;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background-color: #c86b4a;
+  color: #fff;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.contacto-enviar svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.contacto-enviar:hover,
+.contacto-enviar:focus-visible {
+  background-color: #a9573a;
+  transform: translateY(-2px);
+}
+
+.contacto-nota {
+  grid-column: 1 / -1;
+  color: rgba(240, 230, 211, 0.6);
+  font-size: 13px;
+  text-align: left;
+  max-width: none;
+  margin: 0;
+}
+
+.contacto-gracias {
+  border: 1px solid #f0e6d3;
+  padding: 18px 20px;
+  color: #f0e6d3;
+}
+.contacto-gracias p {
+  text-align: left;
+  max-width: none;
+  margin: 0 0 6px;
+}
+.contacto-gracias a {
+  color: #c86b4a;
+}
+
+/* Columna de datos */
+.contacto-datos {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.contacto-dato {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.contacto-dato svg {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  fill: #c86b4a;
+  margin-top: 2px;
+}
+
+.contacto-dato h3 {
+  color: #f0e6d3;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-size: 19px;
+  margin: 0 0 2px;
+}
+
+.contacto-dato p,
+.contacto-dato a {
+  color: #f0e6d3;
+  font-size: 15px;
+  text-align: left;
+  max-width: none;
+  margin: 0;
+  text-decoration: none;
+}
+.contacto-dato a:hover {
+  color: #c86b4a;
+}
+
+.contacto-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background-color: #25d366;
+  color: #fff;
+  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-size: 17px;
+  padding: 11px;
+  text-decoration: none;
+  border-radius: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.contacto-whatsapp svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.contacto-whatsapp:hover,
+.contacto-whatsapp:focus-visible {
+  background-color: #1eb458;
+  color: #fff;
+  transform: translateY(-2px);
 }

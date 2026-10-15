@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Martinez Construcción</title>
+    <meta name="description" content="Contactá a Martinez Construcción: pedí tu presupuesto por WhatsApp. Trabajos de construcción y reformas en Banfield y Zona Sur.">
+    <meta name="keywords" content="construcción Banfield, albañil Zona Sur, reformas, presupuesto construcción, Martinez Construcción">
+    <link rel="icon" type="../image/png" href="../img/favicon_.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="pagina-oscura">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logohome_.png" alt="Martinez Construcción" class="brand-logo" style="height: 40px; width: auto;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto text-center">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="trabajos.html">TRABAJOS</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- contenido principal -->
+
+    <main>
+
+    <section class="banner">
+        <h1 class="titulo">CONTACTO</h1>
+        <p class="pie">Respondemos todas tus dudas</p>
+    </section>
+
+
+    <div class="contacto-grid">
+
+        <!-- Formulario: arma el mensaje y lo abre en WhatsApp -->
+        <div class="contacto-col" data-aos="fade-right">
+            <h2 class="contacto-titulo" id="titulo-form">¡Contactanos!</h2>
+
+            <form class="contacto-form" id="form-contacto" novalidate>
+                <div class="contacto-campo">
+                    <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Introducí tu nombre" autocomplete="given-name" required>
+                </div>
+
+                <div class="contacto-campo">
+                    <label for="apellido">Apellido <span class="obligatorio">*</span></label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Introducí tu apellido" autocomplete="family-name" required>
+                </div>
+
+                <div class="contacto-campo">
+                    <label for="correo">Correo electrónico <span class="opcional">(opcional)</span></label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+                </div>
+
+                <div class="contacto-campo">
+                    <label for="telefono">Teléfono de contacto <span class="obligatorio">*</span></label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="11 1234-5678" autocomplete="tel" inputmode="tel" pattern="[0-9 +()\-]{8,}" required>
+                </div>
+
+                <div class="contacto-campo contacto-campo-ancho">
+                    <label for="mensaje">Mensaje <span class="obligatorio">*</span></label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Contanos qué trabajo necesitás: tipo de obra, zona, medidas aproximadas…" required></textarea>
+                </div>
+
+                <button type="submit" class="contacto-enviar">
+                    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.44 1.73 6.36L3.2 28.8l6.62-1.7a12.75 12.75 0 0 0 6.18 1.58h.01c7.07 0 12.8-5.73 12.8-12.8s-5.73-12.68-12.8-12.68zm0 23.4a10.55 10.55 0 0 1-5.38-1.47l-.39-.23-3.93 1.02 1.05-3.83-.25-.4a10.57 10.57 0 0 1-1.62-5.69c0-5.85 4.76-10.6 10.6-10.6 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.1 7.49c0 5.85-4.75 10.6-10.6 10.6zm5.8-7.94c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.68.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.53-.71-.54h-.6c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.23 3.4 5.4 4.77.75.32 1.34.52 1.79.66.75.24 1.44.2 1.98.13.6-.09 1.88-.77 2.15-1.51.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.6-.37z"/></svg>
+                    Enviar por WhatsApp
+                </button>
+
+                <p class="contacto-nota">Al enviar se abre WhatsApp con tu consulta ya escrita. Solo tenés que tocar enviar.</p>
+            </form>
+
+            <div class="contacto-gracias" id="contacto-gracias" hidden>
+                <p>¡Gracias por tu mensaje! Se abrió WhatsApp con tu consulta: envíala desde ahí y te respondemos a la brevedad.</p>
+                <p>¿No se abrió? <a href="#" id="link-wa-manual" target="_blank" rel="noopener">Tocá acá para abrir WhatsApp</a>.</p>
+            </div>
+        </div>
+
+        <!-- Datos de contacto -->
+        <aside aria-labelledby="titulo-datos" data-aos="fade-left">
+            <h2 class="contacto-titulo" id="titulo-datos">Encontranos en:</h2>
+
+            <ul class="contacto-datos">
+                <li class="contacto-dato">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+                    <div>
+                        <h3>Teléfono / WhatsApp</h3>
+                        <a href="https://wa.me/5491162513981" target="_blank" rel="noopener">11 6251-3981</a>
+                    </div>
+                </li>
+                <li class="contacto-dato">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                    <div>
+                        <h3>Zona de trabajo</h3>
+                        <p>Banfield y alrededores · Zona Sur, Buenos Aires</p>
+                    </div>
+                </li>
+                <!-- CONFIRMAR horarios con los clientes -->
+                <li class="contacto-dato">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"/></svg>
+                    <div>
+                        <h3>Horarios de atención</h3>
+                        <p>Lunes a viernes 08:00 a 18:00 hs</p>
+                        <p>Sábados 08:00 a 13:00 hs</p>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="https://wa.me/5491162513981?text=Hola%2C%20quiero%20hacer%20una%20consulta" class="contacto-whatsapp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.44 1.73 6.36L3.2 28.8l6.62-1.7a12.75 12.75 0 0 0 6.18 1.58h.01c7.07 0 12.8-5.73 12.8-12.8s-5.73-12.68-12.8-12.68zm0 23.4a10.55 10.55 0 0 1-5.38-1.47l-.39-.23-3.93 1.02 1.05-3.83-.25-.4a10.57 10.57 0 0 1-1.62-5.69c0-5.85 4.76-10.6 10.6-10.6 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.1 7.49c0 5.85-4.75 10.6-10.6 10.6zm5.8-7.94c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.68.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.53-.71-.54h-.6c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.23 3.4 5.4 4.77.75.32 1.34.52 1.79.66.75.24 1.44.2 1.98.13.6-.09 1.88-.77 2.15-1.51.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.6-.37z"/></svg>
+                ¡Contactanos ahora mismo!
+            </a>
+        </aside>
+
+    </div>
+
+    </main>
+
+
+    <footer>
+
+        <div class="info">
+            <div>
+                <h3 class="promo-combo">REDES SOCIALES</h3>
+                <ul>
+                    <li><a href="http://www.facebook.com" target="_blank">facebook</a></li>
+                    <li><a href="">X</a></li>
+                    <li><a href="">Instagram</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="promo-combo">MARTINEZ CONSTRUCCIÓN</h3>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="">Politica de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright 2026 Martinez Construcción</p>
+            <p>Ricardo Iorio 123</p>
+            <p>Telefono 1135172850</p>
+        </div>
+
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 700,
+        once: true
+    });
+</script>
+
+<script>
+    // Formulario de contacto → WhatsApp (no hay correo para recibirlo)
+    (function () {
+        const NUMERO_WA = '5491162513981';
+        const form = document.getElementById('form-contacto');
+        const gracias = document.getElementById('contacto-gracias');
+        const linkManual = document.getElementById('link-wa-manual');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            const d = new FormData(form);
+            const lineas = [
+                'Hola! Les escribo desde la web.',
+                '',
+                '*Nombre:* ' + d.get('nombre').trim() + ' ' + d.get('apellido').trim(),
+                '*Teléfono:* ' + d.get('telefono').trim()
+            ];
+            const correo = d.get('correo').trim();
+            if (correo) lineas.push('*Correo:* ' + correo);
+            lineas.push('', '*Consulta:*', d.get('mensaje').trim());
+
+            const url = 'https://wa.me/' + NUMERO_WA + '?text=' + encodeURIComponent(lineas.join('\n'));
+            linkManual.href = url;
+            window.open(url, '_blank', 'noopener');
+            form.hidden = true;
+            gracias.hidden = false;
+        });
+    })();
+</script>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5491162513981?text=Hola%2C%20quiero%20hacer%20una%20consulta" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.004 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.44 1.73 6.36L3.2 28.8l6.62-1.7a12.75 12.75 0 0 0 6.18 1.58h.01c7.07 0 12.8-5.73 12.8-12.8s-5.73-12.68-12.8-12.68zm0 23.4a10.55 10.55 0 0 1-5.38-1.47l-.39-.23-3.93 1.02 1.05-3.83-.25-.4a10.57 10.57 0 0 1-1.62-5.69c0-5.85 4.76-10.6 10.6-10.6 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.1 7.49c0 5.85-4.75 10.6-10.6 10.6zm5.8-7.94c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.68.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.53-.71-.54h-.6c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.23 3.4 5.4 4.77.75.32 1.34.52 1.79.66.75.24 1.44.2 1.98.13.6-.09 1.88-.77 2.15-1.51.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.6-.37z"/>
+    </svg>
+</a>
+
+</body>
+
+</html>
