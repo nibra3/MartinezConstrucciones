@@ -60,6 +60,11 @@
   &-despues {
     background-color: v.$color-primario;
   }
+
+  &-durante {
+    background-color: rgba(v.$color-texto-oscuro, .45);
+    outline: 1px solid rgba(v.$color-blanco, .6);
+  }
 }
 
 // Galería de fotos extra de cada trabajo
