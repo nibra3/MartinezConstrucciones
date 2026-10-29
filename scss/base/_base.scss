@@ -95,6 +95,17 @@ section {
   color: v.$color-secundario;
 }
 
+// Botón "Conocé nuestros trabajos" del inicio
+.destacados-cta {
+  text-align: center;
+  padding: 20px 0;
+
+  .botones {
+    font-size: 18px;
+    padding: 12px 28px;
+  }
+}
+
 // Banner principal (hero): franja naranja de la paleta de Martinez Construcción
 .banner {
   background-color: v.$color-banner;

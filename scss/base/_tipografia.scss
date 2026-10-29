@@ -1,6 +1,6 @@
 @use '../utilities/variables' as v;
 
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Hind:wght@400;500;600&family=Oswald:wght@400;700&display=swap');
 
 @font-face {
   font-family: 'Akira Expanded';
@@ -16,7 +16,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  /* La versión trial no trae números: los dígitos se muestran con Exo ExtraBold */
   unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 
@@ -26,7 +26,7 @@
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  /* La versión trial no trae números: los dígitos se muestran con Exo ExtraBold */
   unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 
@@ -39,7 +39,7 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  /* La versión trial no trae números: los dígitos se muestran con Exo ExtraBold */
   unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Hind:wght@400;500;600&family=Oswald:wght@400;700&display=swap");
 .form-card, .carousel-custom {
   box-shadow: 0 10px 30px rgba(17, 17, 17, 0.3);
 }
@@ -32,7 +32,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  /* La versión trial no trae números: los dígitos se muestran con Exo ExtraBold */
   unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 @font-face {
@@ -41,7 +41,7 @@
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  /* La versión trial no trae números: los dígitos se muestran con Exo ExtraBold */
   unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 @font-face {
@@ -50,11 +50,11 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-  /* La versión trial no trae números: los dígitos se muestran con Oswald */
+  /* La versión trial no trae números: los dígitos se muestran con Exo ExtraBold */
   unicode-range: U+0000-002F, U+003A-F8FE, U+F900-10FFFF;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
 }
 
 body {
@@ -115,7 +115,7 @@ section ul li a {
 
 .secciones {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 22px;
   text-align: center;
   margin-bottom: 16px;
@@ -133,7 +133,7 @@ section ul li a {
 
 .destacadoDelMes {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 25px;
   text-align: center;
   margin-bottom: 30px;
@@ -142,7 +142,7 @@ section ul li a {
 .titulo {
   animation: aparecer 0.6s ease-out 0s both;
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 26px;
   text-align: center;
   margin-bottom: 10px;
@@ -176,6 +176,15 @@ section ul li a {
   color: #244653;
 }
 
+.destacados-cta {
+  text-align: center;
+  padding: 20px 0;
+}
+.destacados-cta .botones {
+  font-size: 18px;
+  padding: 12px 28px;
+}
+
 .banner {
   background-color: #192e35;
 }
@@ -205,7 +214,7 @@ section ul li a {
 .banner-linea1 {
   animation: aparecer 0.6s ease-out 0s both;
   display: block;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-weight: 700;
   color: #f0e6d3;
   font-size: 34px;
@@ -227,7 +236,7 @@ section ul li a {
 .banner-linea2 {
   animation: aparecer 0.6s ease-out 0.1s both;
   display: block;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-weight: 700;
   color: #f0e6d3;
   font-size: 32px;
@@ -335,7 +344,7 @@ section ul li a {
 }
 .caracteristica h3 {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 18px;
   margin: 0;
 }
@@ -428,7 +437,7 @@ body.pagina-oscura main {
 }
 .navbar-custom .brand-title {
   color: #c86b4a;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 19px;
   line-height: 1.15;
   letter-spacing: 0.5px;
@@ -436,7 +445,7 @@ body.pagina-oscura main {
 .navbar-custom .brand-subtitle {
   color: #244653;
   font-size: 10px;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   letter-spacing: 1.5px;
 }
 @media screen and (min-width: 768px) {
@@ -464,7 +473,7 @@ body.pagina-oscura main {
 
 .navbar-custom .nav-link {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   letter-spacing: 0.5px;
   padding: 10px 12px;
   transition: color 0.2s ease;
@@ -539,7 +548,7 @@ body.pagina-oscura main {
 
 .footer-titulo {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 20px;
   letter-spacing: 0.5px;
   margin: 0;
@@ -634,7 +643,7 @@ body.pagina-oscura main {
   background-color: #c86b4a;
   font-weight: bold;
   text-decoration: none;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   padding: 8px 20px;
   border-radius: 0;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
@@ -660,7 +669,7 @@ button.botones {
   margin-bottom: 40px;
 }
 .discos .producto h3 {
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   color: #111111;
   margin-bottom: 4px;
   font-size: 17px;
@@ -681,7 +690,7 @@ button.botones {
 }
 .catalogo .producto h2,
 .catalogo .producto h3 {
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   color: #111111;
   margin-bottom: 4px;
   font-size: 17px;
@@ -734,7 +743,7 @@ button.botones {
 
 .promo-combo {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 25px;
   margin-bottom: 10px;
 }
@@ -772,7 +781,7 @@ button.botones {
 }
 .recital-info h2 {
   color: #244653;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 24px;
   margin-bottom: 12px;
 }
@@ -797,7 +806,7 @@ button.botones {
 }
 .recital-discografia h2 {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 22px;
   margin-bottom: 16px;
 }
@@ -823,7 +832,7 @@ button.botones {
 }
 .historia-item h3 {
   color: #244653;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 20px;
   margin-bottom: 6px;
 }
@@ -837,7 +846,7 @@ button.botones {
   text-align: center;
 }
 .valores .producto h3 {
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   color: #111111;
   margin-bottom: 8px;
   font-size: 17px;
@@ -865,7 +874,7 @@ button.botones {
   text-align: center;
 }
 .carousel-custom .carousel-caption h2 {
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   color: #fff;
   font-size: 20px;
   margin-bottom: 6px;
@@ -969,12 +978,12 @@ button.botones {
 form fieldset legend {
   color: #244653;
   font-weight: bold;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
 }
 
 /* ---- Nuestros servicios ---- */
 .servicios-titulo {
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-weight: 800;
   color: #f0e6d3;
   font-size: 30px;
@@ -1036,7 +1045,7 @@ form fieldset legend {
   border-radius: 0;
 }
 .servicio h3 {
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-weight: 800;
   color: #192e35;
   font-size: 24px;
@@ -1062,7 +1071,7 @@ form fieldset legend {
   height: 100%;
 }
 .trabajo h2 {
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   color: #111111;
   font-size: 22px;
   margin: 20px 0 6px;
@@ -1096,7 +1105,7 @@ form fieldset legend {
   top: 8px;
   left: 8px;
   padding: 3px 10px;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;
@@ -1254,7 +1263,7 @@ img, picture, figure, iframe, video,
 
 .contacto-titulo {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 28px;
   margin-bottom: 24px;
   text-align: left;
@@ -1337,7 +1346,7 @@ img, picture, figure, iframe, video,
   border-radius: 0;
   background-color: #c86b4a;
   color: #fff;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
   padding: 12px;
@@ -1407,7 +1416,7 @@ img, picture, figure, iframe, video,
 
 .contacto-dato h3 {
   color: #f0e6d3;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 19px;
   margin: 0 0 2px;
 }
@@ -1433,7 +1442,7 @@ img, picture, figure, iframe, video,
   width: 100%;
   background-color: #25d366;
   color: #fff;
-  font-family: "Heading Now Trial", "Oswald", sans-serif;
+  font-family: "Heading Now Trial", "Exo", "Oswald", sans-serif;
   font-size: 17px;
   padding: 11px;
   text-decoration: none;
