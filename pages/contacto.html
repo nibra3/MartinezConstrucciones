@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Martinez Construcción</title>
-    <meta name="description" content="Contactá a Martinez Construcción: pedí tu presupuesto por WhatsApp. Trabajos de construcción y reformas en Banfield y Zona Sur.">
+    <meta name="description" content="Contactá a Martinez Construcción: pedí tu presupuesto por WhatsApp, teléfono o correo. Trabajos de construcción y reformas en Banfield y Zona Sur.">
     <meta name="keywords" content="construcción Banfield, albañil Zona Sur, reformas, presupuesto construcción, Martinez Construcción">
     <link rel="icon" type="../image/png" href="../img/favicon_.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -46,11 +46,17 @@
 
     <div class="contacto-grid">
 
-        <!-- Formulario: arma el mensaje y lo abre en WhatsApp -->
+        <!-- Formulario: envía la consulta por correo (FormSubmit) o la abre en WhatsApp -->
         <div class="contacto-col" data-aos="fade-right">
             <h2 class="contacto-titulo" id="titulo-form">¡Contactanos!</h2>
 
-            <form class="contacto-form" id="form-contacto" novalidate>
+            <form class="contacto-form" id="form-contacto" action="https://formsubmit.co/proyecto.martinezconstrucciones@gmail.com" method="POST" novalidate>
+                <!-- Campos ocultos de configuración de FormSubmit -->
+                <input type="hidden" name="_subject" value="Nueva consulta desde la web - Martinez Construcción">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" class="contacto-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
                 <div class="contacto-campo">
                     <label for="nombre">Nombre <span class="obligatorio">*</span></label>
                     <input type="text" id="nombre" name="nombre" placeholder="Introducí tu nombre" autocomplete="given-name" required>
@@ -63,7 +69,7 @@
 
                 <div class="contacto-campo">
                     <label for="correo">Correo electrónico <span class="opcional">(opcional)</span></label>
-                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+                    <input type="email" id="correo" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email">
                 </div>
 
                 <div class="contacto-campo">
@@ -76,15 +82,24 @@
                     <textarea id="mensaje" name="mensaje" placeholder="Contanos qué trabajo necesitás: tipo de obra, zona, medidas aproximadas…" required></textarea>
                 </div>
 
-                <button type="submit" class="contacto-enviar">
+                <button type="submit" class="contacto-enviar" id="btn-enviar-mail">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5z"/></svg>
+                    Enviar consulta
+                </button>
+
+                <button type="button" class="contacto-enviar contacto-enviar-wa" id="btn-enviar-wa">
                     <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.44 1.73 6.36L3.2 28.8l6.62-1.7a12.75 12.75 0 0 0 6.18 1.58h.01c7.07 0 12.8-5.73 12.8-12.8s-5.73-12.68-12.8-12.68zm0 23.4a10.55 10.55 0 0 1-5.38-1.47l-.39-.23-3.93 1.02 1.05-3.83-.25-.4a10.57 10.57 0 0 1-1.62-5.69c0-5.85 4.76-10.6 10.6-10.6 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.1 7.49c0 5.85-4.75 10.6-10.6 10.6zm5.8-7.94c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.68.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.53-.71-.54h-.6c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.23 3.4 5.4 4.77.75.32 1.34.52 1.79.66.75.24 1.44.2 1.98.13.6-.09 1.88-.77 2.15-1.51.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.6-.37z"/></svg>
                     Enviar por WhatsApp
                 </button>
 
-                <p class="contacto-nota">Al enviar se abre WhatsApp con tu consulta ya escrita. Solo tenés que tocar enviar.</p>
+                <p class="contacto-nota" id="contacto-nota">La consulta nos llega por correo. Si preferís, también podés mandarla por WhatsApp.</p>
             </form>
 
-            <div class="contacto-gracias" id="contacto-gracias" hidden>
+            <div class="contacto-gracias" id="gracias-mail" hidden>
+                <p>¡Gracias por tu mensaje! Recibimos tu consulta y te respondemos a la brevedad.</p>
+            </div>
+
+            <div class="contacto-gracias" id="gracias-wa" hidden>
                 <p>¡Gracias por tu mensaje! Se abrió WhatsApp con tu consulta: envíala desde ahí y te respondemos a la brevedad.</p>
                 <p>¿No se abrió? <a href="#" id="link-wa-manual" target="_blank" rel="noopener">Tocá acá para abrir WhatsApp</a>.</p>
             </div>
@@ -98,8 +113,23 @@
                 <li class="contacto-dato">
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
                     <div>
-                        <h3>Teléfono / WhatsApp</h3>
-                        <a href="https://wa.me/5491162513981" target="_blank" rel="noopener">11 6251-3981</a>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/5491168016542" target="_blank" rel="noopener">11 6801-6542</a>
+                    </div>
+                </li>
+                <li class="contacto-dato">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+                    <div>
+                        <h3>Teléfonos</h3>
+                        <p><a href="tel:+5491168016542">11 6801-6542</a></p>
+                        <p><a href="tel:+541142605350">11 4260-5350</a></p>
+                    </div>
+                </li>
+                <li class="contacto-dato">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5z"/></svg>
+                    <div>
+                        <h3>Correo electrónico</h3>
+                        <a href="mailto:proyecto.martinezconstrucciones@gmail.com" class="contacto-mail">proyecto.martinezconstrucciones@gmail.com</a>
                     </div>
                 </li>
                 <li class="contacto-dato">
@@ -120,7 +150,7 @@
                 </li>
             </ul>
 
-            <a href="https://wa.me/5491162513981?text=Hola%2C%20quiero%20hacer%20una%20consulta" class="contacto-whatsapp" target="_blank" rel="noopener">
+            <a href="https://wa.me/5491168016542?text=Hola%2C%20quiero%20hacer%20una%20consulta" class="contacto-whatsapp" target="_blank" rel="noopener">
                 <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.004 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.44 1.73 6.36L3.2 28.8l6.62-1.7a12.75 12.75 0 0 0 6.18 1.58h.01c7.07 0 12.8-5.73 12.8-12.8s-5.73-12.68-12.8-12.68zm0 23.4a10.55 10.55 0 0 1-5.38-1.47l-.39-.23-3.93 1.02 1.05-3.83-.25-.4a10.57 10.57 0 0 1-1.62-5.69c0-5.85 4.76-10.6 10.6-10.6 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.1 7.49c0 5.85-4.75 10.6-10.6 10.6zm5.8-7.94c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.68.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.53-.71-.54h-.6c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.23 3.4 5.4 4.77.75.32 1.34.52 1.79.66.75.24 1.44.2 1.98.13.6-.09 1.88-.77 2.15-1.51.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.6-.37z"/></svg>
                 ¡Contactanos ahora mismo!
             </a>
@@ -154,7 +184,9 @@
             <div class="footer-col">
                 <h3 class="footer-titulo">Contacto</h3>
                 <ul>
-                    <li><a href="https://wa.me/5491162513981" target="_blank" rel="noopener">WhatsApp: 11 6251-3981</a></li>
+                    <li><a href="https://wa.me/5491168016542" target="_blank" rel="noopener">WhatsApp: 11 6801-6542</a></li>
+                    <li><a href="tel:+541142605350">Teléfono: 11 4260-5350</a></li>
+                    <li><a href="mailto:proyecto.martinezconstrucciones@gmail.com" class="footer-mail">proyecto.martinezconstrucciones@gmail.com</a></li>
                     <li>Banfield · Zona Sur, Buenos Aires</li>
                     <li>Lun a vie 08:00 a 18:00 hs</li>
                     <li>Sábados 08:00 a 13:00 hs</li>
@@ -178,19 +210,59 @@
 </script>
 
 <script>
-    // Formulario de contacto → WhatsApp (no hay correo para recibirlo)
+    // Formulario de contacto → correo (FormSubmit) o WhatsApp
     (function () {
-        const NUMERO_WA = '5491162513981';
+        const NUMERO_WA = '5491168016542';
         const form = document.getElementById('form-contacto');
-        const gracias = document.getElementById('contacto-gracias');
+        const btnMail = document.getElementById('btn-enviar-mail');
+        const btnWa = document.getElementById('btn-enviar-wa');
+        const nota = document.getElementById('contacto-nota');
+        const graciasMail = document.getElementById('gracias-mail');
+        const graciasWa = document.getElementById('gracias-wa');
         const linkManual = document.getElementById('link-wa-manual');
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+        function validar() {
             if (!form.checkValidity()) {
                 form.reportValidity();
-                return;
+                return false;
             }
+            return true;
+        }
+
+        // Envío por correo
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!validar()) return;
+
+            const d = new FormData(form);
+            if (d.get('_honey')) return; // bot
+            const email = d.get('email').trim();
+            if (email) d.set('_replyto', email);
+
+            btnMail.disabled = true;
+            btnMail.lastChild.textContent = ' Enviando…';
+
+            fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: d
+            })
+                .then(function (r) { return r.json(); })
+                .then(function (res) {
+                    if (res.success === 'false' || res.success === false) throw new Error(res.message);
+                    form.hidden = true;
+                    graciasMail.hidden = false;
+                })
+                .catch(function () {
+                    nota.textContent = 'No pudimos enviar la consulta por correo. Probá de nuevo o mandala por WhatsApp.';
+                    btnMail.disabled = false;
+                    btnMail.lastChild.textContent = ' Enviar consulta';
+                });
+        });
+
+        // Envío por WhatsApp
+        btnWa.addEventListener('click', function () {
+            if (!validar()) return;
             const d = new FormData(form);
             const lineas = [
                 'Hola! Les escribo desde la web.',
@@ -198,7 +270,7 @@
                 '*Nombre:* ' + d.get('nombre').trim() + ' ' + d.get('apellido').trim(),
                 '*Teléfono:* ' + d.get('telefono').trim()
             ];
-            const correo = d.get('correo').trim();
+            const correo = d.get('email').trim();
             if (correo) lineas.push('*Correo:* ' + correo);
             lineas.push('', '*Consulta:*', d.get('mensaje').trim());
 
@@ -206,13 +278,13 @@
             linkManual.href = url;
             window.open(url, '_blank', 'noopener');
             form.hidden = true;
-            gracias.hidden = false;
+            graciasWa.hidden = false;
         });
     })();
 </script>
 
 <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/5491162513981?text=Hola%2C%20quiero%20hacer%20una%20consulta" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+<a href="https://wa.me/5491168016542?text=Hola%2C%20quiero%20hacer%20una%20consulta" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.004 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.44 1.73 6.36L3.2 28.8l6.62-1.7a12.75 12.75 0 0 0 6.18 1.58h.01c7.07 0 12.8-5.73 12.8-12.8s-5.73-12.68-12.8-12.68zm0 23.4a10.55 10.55 0 0 1-5.38-1.47l-.39-.23-3.93 1.02 1.05-3.83-.25-.4a10.57 10.57 0 0 1-1.62-5.69c0-5.85 4.76-10.6 10.6-10.6 2.83 0 5.49 1.1 7.49 3.11a10.53 10.53 0 0 1 3.1 7.49c0 5.85-4.75 10.6-10.6 10.6zm5.8-7.94c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.68.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.53-.71-.54h-.6c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.23 3.4 5.4 4.77.75.32 1.34.52 1.79.66.75.24 1.44.2 1.98.13.6-.09 1.88-.77 2.15-1.51.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.6-.37z"/>
     </svg>

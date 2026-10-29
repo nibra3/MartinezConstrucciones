@@ -1447,3 +1447,30 @@ img, picture, figure, iframe, video,
   color: #fff;
   transform: translateY(-2px);
 }
+
+/* Formulario: botón secundario de WhatsApp y campo anti-spam */
+.contacto-enviar-wa {
+  background-color: #25d366;
+}
+.contacto-enviar-wa:hover,
+.contacto-enviar-wa:focus-visible {
+  background-color: #1eb458;
+}
+.contacto-enviar:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+.contacto-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* El mail es largo: que corte en pantallas chicas */
+.contacto-mail,
+.footer-mail {
+  overflow-wrap: anywhere;
+}
