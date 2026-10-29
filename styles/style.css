@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@800&family=Hind:wght@400;500;600&family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Exo:wght@800&family=Hind:wght@400;500;600&family=Oswald:wght@400;700&display=swap");
 .form-card, .carousel-custom {
   box-shadow: 0 10px 30px rgba(17, 17, 17, 0.3);
 }
@@ -404,6 +404,10 @@ section ul li a {
 .desde-texto .destacadoDelMes {
   text-align: left;
   margin-bottom: 20px;
+}
+.desde-texto .destacadoDelMes .anio {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
 }
 .desde-texto p {
   color: #f0e6d3;
