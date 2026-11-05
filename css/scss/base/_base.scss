@@ -1,0 +1,71 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+main {
+  background-color: v.$color-fondo;
+}
+
+section {
+  padding: v.$espacio-medio;
+
+  @include m.desktop {
+    padding: v.$espacio-grande;
+  }
+
+  ul li {
+    list-style: none;
+    text-align: center;
+    color: v.$color-texto-claro;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.secciones {
+  @include m.titulo(22px);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.parrafos {
+  color: v.$color-texto-suave;
+  font-size: 13px;
+  margin-bottom: v.$espacio-chico;
+}
+
+.destacados {
+  background-color: v.$color-texto-claro;
+}
+
+.destacadoDelMes {
+  @include m.titulo(25px);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo {
+  color: v.$color-primario;
+  font-family: v.$font-titulos;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @include m.desktop {
+    font-size: 30px;
+  }
+}
+
+.pie {
+  text-align: center;
+  color: v.$color-texto-claro;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,30 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.navbar-custom {
+  background-color: v.$color-fondo-oscuro;
+  padding: 14px v.$espacio-medio;
+
+  .brand-title {
+    color: v.$color-primario;
+    font-family: v.$font-titulos;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+  }
+
+  .brand-subtitle {
+    color: v.$color-secundario;
+    font-size: 11px;
+    font-family: v.$font-principal;
+    letter-spacing: 2px;
+  }
+
+  @include m.desktop {
+    padding: 14px v.$espacio-grande;
+
+    .brand-title {
+      font-size: 32px;
+    }
+  }
+}
